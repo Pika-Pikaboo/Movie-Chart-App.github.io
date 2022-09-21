@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { movies } from "./Movies.jsx";
+import NavItems from "./NavItems.jsx";
+import Movie from "./Movie.jsx";
+import List from "./List.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="mx-[5rem] py-6 max-w-[750px] divide-y divide-slate-100 rounded-2xl mt-[1rem] shadow-2xl">
+      <NavItems/>
+      <List>
+        {movies.map((movie) => (
+          <Movie key={movie.id} movie={movie}/>
+        ))}
+      </List>
     </div>
   );
 }
