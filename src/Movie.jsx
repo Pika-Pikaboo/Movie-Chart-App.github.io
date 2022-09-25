@@ -1,5 +1,4 @@
 import React from 'react';
-import movies from "./Movies.jsx";
 
 export default function Movie({ movie }) {
 	return (
