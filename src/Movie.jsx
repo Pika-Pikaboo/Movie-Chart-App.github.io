@@ -3,7 +3,7 @@ import React from 'react';
 export default function Movie({ movie }) {
 	return (
 		<article>
-			<div className="max-w-full flex flex-row items-center mx-4 my-6 gap-10">
+			<div className="max-w-full font-josefin flex flex-row items-center mx-4 my-6 gap-10">
 				<img src={movie.imgUrl} alt={movie.name} className="basis-[15%] rounded-xl object-cover object-center"/>
 				<div className="flex flex-col basis-3/4 leading-[2.5rem]">
 					<div className="flex flex-row justify-between">
